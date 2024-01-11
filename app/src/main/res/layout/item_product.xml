@@ -11,19 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/delete_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/ic_delete" />
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/delete_icon"
             app:cardCornerRadius="14dp"
             app:cardElevation="0dp">
 
@@ -60,12 +50,27 @@
                     android:padding="2dp"
                     android:textColor="@color/black" />
 
-                <Button
-                    android:id="@+id/edit_button"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Chỉnh sửa" />
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/edit_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chỉnh sửa"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        android:id="@+id/delete_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/edit_button"
+                        android:text="Xóa"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
